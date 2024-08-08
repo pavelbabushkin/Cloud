@@ -1,0 +1,34 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Страница авторизации</title>
+	<link type="text/css" rel="stylesheet" href="{%static 'css/Style.css'%}"/>
+	<script src="JS/script.js"></script>
+	</head>
+	<body>
+	<div class="forms">
+		<div class="form_auth_block">
+			<div class="form_auth_block_content">
+				<p class="form_auth_block_head_text">Авторизация</p>
+				<form class="form_auth_style" action="{% url 'Regist' %}" method="post">
+					{% csrf_token %}
+					<label>Введите Ваш e-mail</label>
+					<input type="email" name="auth_email" placeholder="Введите Ваш e-mail" required >
+					<label>Введите Ваш пароль</label>
+					<input type="password" name="auth_pass" placeholder="Введите пароль" required >
+					<button class="form_auth_button" type="submit" name="form_auth_submit">Войти</button>
+				</form>
+				<form action='Regist.html' target="_blank">
+					<button class="form_regist_button" type="regist" name="form_regist_button">Регистрация</button>
+				</form>
+			</div>
+		</div>
+	<div class="forms">
+  	</body>
+</html>
+
+
+
